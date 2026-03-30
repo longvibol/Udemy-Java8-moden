@@ -1,0 +1,7 @@
+- Function in java is a method in a class 
+
+
+
+
+
+
