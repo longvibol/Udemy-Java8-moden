@@ -13,7 +13,7 @@ public class MethodRefConsumer {
 	
 	
 	// className::instanceMethod
-	static Consumer<Student> c2 = Student::printListOfStudent;
+	static Consumer<Student> c2 = Student::printListOfActivities;
 	
 	public static void main(String[] args) {
 
