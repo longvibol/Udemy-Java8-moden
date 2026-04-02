@@ -9,8 +9,20 @@ public class Student {
     private int gradeLevel;
     private double gpa;
     private String gender;
-    private int noteBooks;
-    private Optional<Bike> bike;
+    List<String> activities = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", gradeLevel=" + gradeLevel +
+                ", gpa=" + gpa +
+                ", gender='" + gender + '\'' +
+                ", activities=" + activities +
+                ", noteBooks=" + noteBooks +
+                ", bike=" + bike +
+                '}';
+    }
 
     public Optional<Bike> getBike() {
         return bike;
@@ -20,29 +32,23 @@ public class Student {
         this.bike = bike;
     }
 
-    public Student(){
-
-    }
-
-    public Student(String name, int gradeLevel, double gpa, String gender, int noteBooks, List<String> activities) {
-        this.name = name;
-        this.gradeLevel = gradeLevel;
-        this.gpa = gpa;
-        this.gender = gender;
-        this.noteBooks = noteBooks;
-        this.activities = activities;
-    }
-    
-    public void printListOfStudent() {
-    	System.out.println(activities);
-    }
+    private int noteBooks;
+    private Optional<Bike> bike = Optional.empty();
 
     public int getNoteBooks() {
-
         return noteBooks;
     }
 
     public void setNoteBooks(int noteBooks) {
+        this.noteBooks = noteBooks;
+    }
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int noteBooks) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activities = activities;
         this.noteBooks = noteBooks;
     }
 
@@ -54,8 +60,12 @@ public class Student {
         this.activities = activities;
     }
 
+    public Student() {
+
+    }
+
     public Student(String s) {
-        this.name = s;
+        this.name=s;
     }
 
     public String getGender() {
@@ -90,30 +100,17 @@ public class Student {
         this.gpa = gpa;
     }
 
-    List<String> activities = new ArrayList<>();
+    public void printListOfActivities(){
+        System.out.println(this.activities);
+    }
 
-    public  List<String> getActivities() {
-        return this.activities;
+
+    public List<String> getActivities() {
+        return activities;
     }
 
     public void setActivities(List<String> activities) {
         this.activities = activities;
-    }
-
-    public void printListOfActivities(){
-
-        System.out.println("List of Activities are : " + this.activities);
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", gradeLevel=" + gradeLevel +
-                ", gpa=" + gpa +
-                ", gender='" + gender + '\'' +
-                ", activities=" + activities +
-                '}';
     }
 
 
