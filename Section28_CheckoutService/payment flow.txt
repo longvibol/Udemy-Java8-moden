@@ -1,0 +1,1 @@
+- PaymentFactory : accept the card type (Debit,CreditCard,Reward)
