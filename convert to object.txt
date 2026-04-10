@@ -1,0 +1,10 @@
+Convert from String to the Object : 
+We use serilife and disarealive library 
+
+
+==> we use Jackson builder library 
+
+- CompletableFuture : with Asyn : មានន័យថាវាមិន Block thread ទេ ពេលដែលគេ class it will assign the new thread 
+
+here is the difference : for the httpClient 
+
